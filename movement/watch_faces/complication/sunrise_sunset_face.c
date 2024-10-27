@@ -56,6 +56,10 @@ static void _sunrise_sunset_face_update(movement_settings_t *settings, sunrise_s
         movement_location.bit.longitude = longLatPresets[state->longLatToUse].longitude;
     }
 
+    movement_location.reg = 2;
+    movement_location.bit.latitude = 5220;
+    movement_location.bit.longitude = -240;
+
     if (movement_location.reg == 0) {
         watch_display_string("RI  no Loc", 0);
         return;
